@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeGame</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 text-slate-100">
+<header class="bg-slate-950 border-b border-lime-500/30">
+
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+   <div class="text-lime-400 font-extrabold text-xl">HomeGame</div>
+
+    <ul class="flex gap-8 text-sm font-semibold">
+        <li><a href="#" data-page="inicio" class="nav-link text-lime-400">Inicio</a></li>
+
+        <li><a href="#" data-page="productos" class="nav-link hover:text-lime-400 transition">Productos</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main id="contenido" class="max-w-6xl mx-auto px-6 py-12 min-h-[70vh]">
+
+    <p class="text-slate-400">
+        Cargando...
+    </p>
+
+</main>
+<div id="modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center p-4">
+    <div class="bg-slate-800 rounded-xl max-w-lg w-full p-6 relative">
+        <button id="cerrar-modal" class="absolute top-2 right-4 text-2xl">&times;</button>
+        <div id="modal-contenido"></div>
+    </div>
+</div>
+<script src="js/app.js"></script>
+    
+</body>
+</html>

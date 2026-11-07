@@ -1,0 +1,43 @@
+<h2 class="text-3xl font-bold text-lime-400">Nuestros Productos</h2>
+
+<form id="form-filtros" class="grid grid-cols-2 md:grid-cols-6 gap-3 mt-6 bg-slate-800 p-4 rounded-xl border border-slate-700">
+  <input type="text" name="nombre" placeholder="Nombre" maxlength="120"
+    class="col-span-2 bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm">
+
+  <select name="categoria_id" id="filtro-categoria"
+    class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm">
+    <option value="">Todas las categorías</option>
+  </select>
+
+  <input type="number" name="precio_min" placeholder="Precio mín." min="0" step="0.01"
+    class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm">
+
+  <input type="number" name="precio_max" placeholder="Precio máx." min="0" step="0.01"
+    class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm">
+
+  <label class="flex items-center gap-2 text-sm">
+    <input type="checkbox" name="stock_min" value="1"> Solo con stock
+  </label>
+
+  <button type="submit" class="col-span-2 bg-lime-500 text-slate-900 font-bold py-2 rounded">Filtrar</button>
+  <button type="reset" id="limpiar-filtros" class="col-span-2 bg-slate-700 font-bold py-2 rounded">Limpiar</button>
+</form>
+
+<div class="flex flex-wrap items-center justify-between gap-3 mt-3">
+  <p id="mensaje-filtros" class="text-sm text-slate-400"></p>
+
+  <label class="flex items-center gap-2 text-sm">
+    Items por página
+    <select id="por-pagina"
+      class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm">
+      <option value="3">3</option>
+      <option value="6" selected>6</option>
+      <option value="9">9</option>
+      <option value="12">12</option>
+    </select>
+  </label>
+</div>
+
+<div id="contenedor-productos" class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6"></div>
+
+<nav id="paginacion" class="flex flex-wrap justify-center gap-2 mt-8"></nav>
